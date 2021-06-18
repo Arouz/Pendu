@@ -1,0 +1,25 @@
+﻿<Window x:Class="Jeu_Pendu.dico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dictionnaire" Height="629.665" Width="270.55" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFC9C9C9" Offset="0"/>
+            <GradientStop Color="#FFBBBBBB" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <ListBox x:Name="ListeMot" HorizontalAlignment="Left" Height="341" Margin="19,46,0,0" VerticalAlignment="Top" Width="223" SelectionChanged="ListeMot_SelectionChanged"/>
+        <Label Content="Langue :" HorizontalAlignment="Left" Height="26" Margin="19,15,0,0" VerticalAlignment="Top" Width="56"/>
+        <TextBox x:Name="MotText" HorizontalAlignment="Left" Height="23" Margin="19,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" TextChanged="MotText_TextChanged"/>
+        <Button x:Name="BtnPoly" Content="Modifier" HorizontalAlignment="Left" Height="20" Margin="134,421,0,0" VerticalAlignment="Top" Width="108" Click="BtnPoly_Click"/>
+        <Button x:Name="BtnAdd" Content="Ajouter" HorizontalAlignment="Left" Height="20" Margin="19,421,0,0" VerticalAlignment="Top" Width="108
+                " Click="BtnAdd_Click"/>
+        <TextBlock x:Name="TextError" HorizontalAlignment="Left" Height="116" Margin="19,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Foreground="#FFD32626"><Run Language="fr-fr" Text=""/></TextBlock>
+        <ComboBox x:Name="Cb_Langue" HorizontalAlignment="Left" Height="23" Margin="75,17,0,0" VerticalAlignment="Top" Width="167" SelectionChanged="Cb_Langue_SelectionChanged">
+            <ComboBoxItem Content="Français" HorizontalAlignment="Left" Width="221" IsSelected="True"/>
+            <ComboBoxItem Content="Latin" HorizontalAlignment="Left" Width="221"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
